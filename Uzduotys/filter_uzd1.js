@@ -10,31 +10,23 @@ const users = [
 
 
 // Without using filter, filter all inactive users
-// const inactiveUsersHof = users.filter(user => {
-//     return !user.isActive
-// });
-
+const inactiveUsersHof = users.filter(user => {
+    return !user.isActive
+});
 
 /* ===============================C=O=D=E================================= */
 
-// let inactiveUsers = []
-
-
+const inactiveUsers = [];
+for (let i = 0; i < users.length; i++) {
+    if (users[i].isActive === false){
+        inactiveUsers.push(users[i])
+    }
+}
+console.log(inactiveUsers);
 
 /* ===============================T=E=S=T================================= */
 
-// const assert = require("node:assert")
+const assert = require("node:assert")
+assert.strictEqual(JSON.stringify(inactiveUsers), JSON.stringify(inactiveUsersHof))
+console.log("Well done!")
 
-// assert.strictEqual(JSON.stringify(inactiveUsers), JSON.stringify(inactiveUsersHof))
-
-
-// console.log("Well done!")
-
-
-let filterInactive = [];
-for (let i = 0; i < users.length; i++) {
-    if (users[i].isActive === false){
-        filterInactive = [...filterInactive, users[i]]
-    }
-}
-console.log(filterInactive);

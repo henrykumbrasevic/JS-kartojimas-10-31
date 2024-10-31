@@ -2,7 +2,6 @@
   "name": "js-2024-09-30",
   "version": "1.0.0",
   "main": "script.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

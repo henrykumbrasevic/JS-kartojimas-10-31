@@ -9,32 +9,27 @@ const students = [
 
 
 // Without using filter, filter out any students that have less than 85 from math
-// const studentsFilteredHof = students.filter(student => {
-//     return student.scores.math < 85
-// })
+const studentsFilteredHof = students.filter(student => {
+    return student.scores.math < 85
+})
 
 /* ===============================C=O=D=E================================= */
 
-// let studentsFiltered = []
-
-
+const studentsFiltered = [];
+for (let i = 0; i < students.length; i++) {
+    if (students[i].scores.math < 85){
+        studentsFiltered.push(students[i])
+    }
+}
+console.log(studentsFiltered);
 
 /* ===============================T=E=S=T================================= */
 
-// const assert = require("node:assert")
-
-// assert.strictEqual(JSON.stringify(studentsFiltered), JSON.stringify(studentsFilteredHof))
-
-
-// console.log("Well done!");
+const assert = require("node:assert")
+assert.strictEqual(JSON.stringify(studentsFiltered), JSON.stringify(studentsFilteredHof))
+console.log("Well done!");
 
 
 
-let filterByMath = [];
-for (let i = 0; i < students.length; i++) {
-    if (students[i].scores.math < 85){
-        filterByMath = [...filterByMath, students[i]]
-    }
-}
-console.log(filterByMath);
+
 
